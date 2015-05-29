@@ -59,11 +59,9 @@
         </ul>
 
 </footer>
-<% if user_signed_in? %>
- 	<% current_user.game_boards.each do |board|%>
-		<%= subscribe_to "/#{board.id}/join" %>
-	<% end%>
-<% end %>
+<div id="join-subscriber">
+ <%= render 'layouts/join_subscriber' %>
+</div>
 </body>
 </html>
 
