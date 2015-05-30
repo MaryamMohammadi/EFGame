@@ -1,0 +1,5 @@
+<% @game.game_boards.each do |board| %>
+	<% publish_to "/#{board.id}/join" do %>
+		$('#chats').html("<%= escape_javascript( render 'game_boards/chats') %>")
+	<% end %>
+<% end %>

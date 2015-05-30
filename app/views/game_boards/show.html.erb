@@ -50,8 +50,18 @@
 	</table>
 	<%= f.submit 'استپ', :id=>"Submit", :class=>"btn disabled" %>
 <% end %>	
-<!-- <%= link_to 'Edit', edit_game_board_path(@game_board) %> |
-<%= link_to 'Back', game_boards_path %> -->
+
+<br/>
+<h3>گفتگوی دوستانه</h3>
+<div id="chatbox">
+	<%= form_for [@game, Chat.new], :remote => true do |f| %>
+		<%= f.text_area :text %>
+		<%= f.submit 'ارسال' %>
+	<% end %>
+</div>
+<div id="chats">
+ <%= render 'game_boards/chats'%>
+</div>
 </div>
 
 

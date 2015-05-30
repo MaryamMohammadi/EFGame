@@ -1,0 +1,11 @@
+
+
+<% @game.chats.order(:created_at => :desc).each do |chat| %>
+    <div class="chat">
+      <div class="sender">
+        <%= chat.sender.username %>
+      </div> 
+      <div class="text"><%= chat.text %></div>
+	  ------------------------------
+    </div>
+<% end %>
