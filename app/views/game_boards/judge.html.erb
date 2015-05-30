@@ -31,8 +31,10 @@
 			<td><%= @judge_board.food %>	<%= f.check_box :food, :disabled => @judge_board.food==""%></td>
 			<td><%= @judge_board.animal %>	<%= f.check_box :animal, :disabled => @judge_board.animal=="" %></td>
 			<td><%= @judge_board.object %>	<%= f.check_box :object, :disabled => @judge_board.object=="" %></td>
+			
 		</tr>
 	</table>
+	<%= f.check_box :judge_id, :style=>"visibility:hidden" %>
 	<%= f.submit 'قضاوت', :id=>"Submit" %>
 <% end %>	
 </div>
