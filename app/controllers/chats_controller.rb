@@ -1,5 +1,5 @@
 class ChatsController < ApplicationController
-  before_action :set_chat, only: [:show, :edit, :update, :destroy]
+#before_action :set_chat, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
 
@@ -41,8 +41,8 @@ class ChatsController < ApplicationController
 #     flash[:notice] = 'Chat was successfully updated.' if @chat.update(chat_params)
 #     respond_with(@chat)
 #   end
-
-  # def destroy
+#
+#   def destroy
 #     @chat.destroy
 #     respond_with(@chat)
 #   end
@@ -53,6 +53,6 @@ class ChatsController < ApplicationController
     end
 
     def chat_params
-      params.require(:chat).permit(:game_id, :sender_i, :text)
+      params.require(:chat).permit(:game_id, :sender_id, :text)
     end
 end

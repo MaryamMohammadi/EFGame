@@ -53,12 +53,7 @@
 
 <br/>
 <h3>گفتگوی دوستانه</h3>
-<div id="chatbox">
-	<%= form_for [@game, Chat.new], :remote => true do |f| %>
-		<%= f.text_area :text %>
-		<%= f.submit 'ارسال' %>
-	<% end %>
-</div>
+
 <div id="chats">
  <%= render 'game_boards/chats'%>
 </div>
